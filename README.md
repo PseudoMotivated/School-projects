@@ -1,2 +1,2 @@
 # School-projects
-A repo where i document school projectss and keep code. Will not be maintained if i don't feel like it.
+A repo where I document school projects and keep code. Will not be maintained if I don't feel like it.
