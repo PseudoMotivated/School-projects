@@ -45,6 +45,8 @@ void loop(){
   int i = 0;
   buttonState == digitalRead(button);
   if (buttonState = LOW) {
+//This works because the button is wired to ground, and the pin is writing/reading high. When the button is pushed, the pin reads LOW.
+//This isn't frying the arduino because the internal pullup resistor is on due to line 16.
     i + 1;
 // Resets the counter to 1 when it reaches 4. Going back to the red light.
     if (i >= 4) {
