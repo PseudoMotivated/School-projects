@@ -18,24 +18,24 @@ void setup() {
 
 // Makes the red light blink
 void redlight() {
-    digitalWrite(0, HIGH);
+    digitalWrite(red, HIGH);
     delay(300);
-    digitalWrite(0, LOW);
+    digitalWrite(red, LOW);
     delay(300);
 }
 // Makes the yellow light blink
 void yellowlight() {
-    digitalWrite(1, HIGH);
+    digitalWrite(yellow, HIGH);
     delay(300);
-    digitalWrite(1, LOW);
+    digitalWrite(yellow, LOW);
     delay(300);
     
 }
 // Makes the green light blink
 void greenlight() {
-    digitalWrite(2, HIGH);
+    digitalWrite(green, HIGH);
     delay(300);
-    digitalWrite(2, LOW);
+    digitalWrite(green, LOW);
     delay(300);
 }
 
@@ -53,16 +53,18 @@ void loop(){
        i = 1;
     }
   }
-// Loops the redlight function when the counter reaaches 1. 
+// Loops the redlight function when the counter reaches 1. 
   while (i == 1) {
     redlight();
   }
-// Loops the yellowlight function when the counter reaaches 2. 
+// Loops the yellowlight function when the counter reaches 2. 
   while (i == 2) {
     yellowlight();
   }
-// Loops the greenlight function when the counter reaaches 3. 
+// Loops the greenlight function when the counter reaches 3. 
   while (i == 3) {
     greenlight();
   }
 }
+
+
