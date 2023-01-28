@@ -11,9 +11,8 @@ void setup() {
   pinMode(red, OUTPUT);
   pinMode(yellow, OUTPUT);
   pinMode(green, OUTPUT);
-  pinMode(button, INPUT);
-// Every digital pin in the arduino has a resistor in it, the line below enables that resistor, getting rid of the need of a physical one.  
-  digitalWrite(button, HIGH);
+  //Turn on the internal resistor in the digital pin and sets it to input.
+  pinMode(button, INPUT_PULLUP);
 }
 
 // Makes the red light blink
