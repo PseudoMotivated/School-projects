@@ -1,3 +1,4 @@
+// IMPORTANT!!!! This code is not good, unreliable, and not good. I will reimplement this later. DONT USE.
 // Defines what pins belongs to what color diode, so I don't get a headache when I go back looking over the code trying to see what pin does what.
 const int red = 0;
 const int yellow = 1;
