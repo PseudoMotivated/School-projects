@@ -67,4 +67,4 @@ void loop(){
   }
 }
 
-
+// Editing this again to put up another reminder that this is horrendous code please don't use it. 
