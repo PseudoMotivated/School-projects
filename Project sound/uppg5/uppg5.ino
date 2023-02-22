@@ -17,10 +17,8 @@
 // Just to make my life a little easier.
 //------------------------------------------------------
 
-// This is going to be used later where i switch which led is on, 
-// It just sets a start value for which led starts first. 
-#define led_state false
-
+// beginning state of the led switching function
+bool led_state = false;
 
 
 // If you're going to use this program for your own and want to change the pins
@@ -39,16 +37,17 @@
 /////////////////////////////////
 
 void switch_led(){      // A simple function to toggle between two leds. 
-  led_state != led_state; // Toggles the boolean
   if (led_state == false){ // If the boolean is 
                           // FALSE the white led is on and blue is off.
     digitalWrite(white, HIGH);
     digitalWrite(blue, LOW);
+    led_state = true; // toggles bool
   }
   else{                   // If the boolean is TRUE then blue is on 
                           // And white is turned off. 
     digitalWrite(blue, HIGH);
     digitalWrite(white, LOW);
+    led_state = false; // toggles bool
   }
 }
 
@@ -78,7 +77,7 @@ void playTone(const char *note, long length){
   }
 //-----
   if (note == "D"){
-    tone(speaker, 523, length); // Plays D in fifth octave.
+    tone(speaker, 587, length); // Plays D in fifth octave.
     delay(length); // Then delays as long as the tone plays so it has time to finish. 
   }
   if (note == "E"){
@@ -103,47 +102,49 @@ void playTone(const char *note, long length){
 // This is exactly the same as the playTone() function
 // except it also toggles the led that is on after playing a tone.
 void playToneAndSwitchLED(const char *note, long length){
-
 // This is damn long if-chain to just map the passed tone argument to the appropriate frequency.
   if (note == "A"){
-    tone(speaker, 880, length); // Plays A in fifth octave.
     switch_led(); // Toggles the led that is on.
+    tone(speaker, 880, length); // Plays A in fifth octave.
     delay(length); // Then delays as long as the tone plays so it has time to finish. 
+
   }
 //-----  
   if (note == "B"){
-    tone(speaker, 988, length); // Plays B in fifth octave.
     switch_led(); // Toggles the led that is on.
+    tone(speaker, 988, length); // Plays B in fifth octave.
     delay(length); // Then delays as long as the tone plays so it has time to finish. 
+
   }
 //-----
   if (note == "C"){
-    tone(speaker, 523, length); // Plays C in fifth octave.
     switch_led(); // Toggles the led that is on.
+    tone(speaker, 523, length); // Plays C in fifth octave.
     delay(length); // Then delays as long as the tone plays so it has time to finish. 
   }
 //-----
   if (note == "D"){
-    tone(speaker, 587, length); // Plays D in fifth octave.
     switch_led(); // Toggles the led that is on.
+    tone(speaker, 587, length); // Plays D in fifth octave.
     delay(length); // Then delays as long as the tone plays so it has time to finish. 
   }
 //-----
   if (note == "E"){
-    tone(speaker, 659, length); // Plays E in fifth octave.
     switch_led(); // Toggles the led that is on.
+    tone(speaker, 659, length); // Plays E in fifth octave.
     delay(length); // Then delays as long as the tone plays so it has time to finish. 
+
   }
 //-----
   if (note == "F"){
-    tone(speaker, 698, length); // Plays F in fifth octave.
     switch_led(); // Toggles the led that is on.
+    tone(speaker, 698, length); // Plays F in fifth octave.
     delay(length); // Then delays as long as the tone plays so it has time to finish. 
   }
 //-----
   if (note == "G"){
-    tone(speaker, 784, length); // Plays G in fifth octave.
     switch_led(); // Toggles the led that is on.
+    tone(speaker, 784, length); // Plays G in fifth octave.
     delay(length); // Then delays as long as the tone plays so it has time to finish. 
   }
 //-----
@@ -306,11 +307,11 @@ void setup() {
   pinMode(speaker, OUTPUT);
   pinMode(white, OUTPUT);
   pinMode(blue, OUTPUT);
-  digitalWrite(blue, LOW);
-  digitalWrite(white, LOW);
 }
 
 
 void loop(){
   bjornen_sover();
 }
+
+
