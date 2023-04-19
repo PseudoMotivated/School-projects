@@ -1,0 +1,3 @@
+# Changes made to the code
+I took the code from uppg3 and modified it so that two leds turn on and off interchangeably. I added two lines of code in `setup(){}` using `pinMode()` to set pin 6 and pin 7 to outputs. 
+And then I added a few lines of code in `loop(){}` that made it so that after the servo turned to 180 degrees or to 0 degrees one of the lights turned on and the function paused. For that I used `digitalWrite()` and `delay()`. 

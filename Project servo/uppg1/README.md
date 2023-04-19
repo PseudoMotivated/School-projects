@@ -1,0 +1,2 @@
+# Conclusion
+Using this experiment I found out that the servo rotates 180 degrees, no more than that. The changes I made in the code to discover that were that I changed the argument passed to `myServo.write()`. I changed it from 180 to 200 and it did not rotate more.

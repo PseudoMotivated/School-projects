@@ -1,0 +1,2 @@
+# Changes to the code
+I took the code from uppg2 and added a few more calls to `myServe.write()` so the servo rotates to a few different angles with a `delay()` of 440 milliseconds after. There is also one `delay()` which is 200 milliseconds. I did all of this inside `loop(){}`. 

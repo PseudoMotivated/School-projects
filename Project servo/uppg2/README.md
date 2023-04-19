@@ -1,0 +1,2 @@
+# Conclusion
+To conduct this experiment I incrementally reduced the number of milliseconds passed to the `delay()` function until the servo didn't have time to rotate the full 180 degrees. Then I worked myself up a little until it reached 180 degrees again. I was able to conclude that the servo needed 440 milliseconds to rotate 180 degrees. 
